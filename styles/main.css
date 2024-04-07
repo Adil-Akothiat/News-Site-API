@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body{
+    position: relative;
+    margin: 0;
+    background-image: url(../media/earth.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 1200px;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.title{
+    margin-top: 5%;
+}
+.title0{
+    margin-left: 50px;
+    position: relative;
+    color: #fff;
+    font-size: 9em;
+    z-index: 1;
+    margin-bottom: 0;
+}
+.title1{
+    margin-left: 50px;
+    position: relative;
+    color: #fff;
+    font-size: 8em;
+    z-index: 1;
+    margin-bottom: 0;
+}
+.title2{
+    margin-left: 70px;
+    position: relative;
+    color: #fff;
+    font-size: 3em;
+    z-index: 1;
+}
+@media screen and (max-width: 500px) {
+    .title0 {
+        font-size: 6em;
+    }
+    .title1 {
+        font-size: 5em;
+    }
+    header a {
+        display: block;
+        margin-bottom: 1.5em;
+    }
+}
+.container {
+    padding-top: 100px;
+    width: 80%; /* 80% of page width */
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 20px; /* Adjust the gap between cards */
+    
+}
+.news-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px); /*Glass effect i guess */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-left: auto;
+    margin-right: auto;
+}
+.news-card:hover {
+   
+    backdrop-filter: blur(12px); 
+}
+.news-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.news-content {
+    padding: 15px;
+    background-color: transparent;
+}
+.news-content h2 {
+    margin: 0;
+    font-size: 18px;
+}
+.box h2,
+.box p{
+   color: rgb(207, 207, 207);
+}
+.news-content .description {
+    margin-top: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, opacity 0.3s;
+}
+.news-card:hover .description {
+    opacity: 1;
+    max-height: 100px;
+}
+.read-more {
+    color: rgb(207, 207, 207);
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.read-more:hover {
+    color: #81c2ff;
+}
